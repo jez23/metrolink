@@ -16,11 +16,11 @@ drive: function() {
     var nextStationIndex = currentStationIndex + 1
 
     if (nextStationIndex >= routeStations.length ) {
-        return "End the line!"
+        return "End of the line!"
     }
 
     this._currentStation = routeStations[nextStationIndex]
-    return "Now arriving at: " + this._currentStation.getName()
+    return "This is the service from "  + routeStations[0].getName() + " to " + routeStations[routeStations.length-1].getName()  + " Now arriving at: " + this._currentStation.getName()
     
 }
 }
