@@ -36,6 +36,13 @@ altrinchamToAshtonUnderLyne.addStation(new Station(stationName))
 
   var tram = new Tram(altrinchamToAshtonUnderLyne, altrinchamToAshtonUnderLyne.getStations()[0])
 
+
+
+function updateDOM () {
+
+$("#stations").html("")
+
+
 $.each(altrinchamToAshtonUnderLyne.getStations(), function (stationIndex, station) {
   var css = ''
   if (tram.getCurrentStation() === station){
@@ -49,6 +56,19 @@ $.each(altrinchamToAshtonUnderLyne.getStations(), function (stationIndex, statio
 
   $('#stations').append(stationHTML)
 })
+}
+
+updateDOM()
+
+$("#nextStationBtn").click(function(){
+tram.drive()
+updateDOM()
 
 
+})
 
+  $("#reset").click(function(){
+          tram.reset()
+          updateDOM()  
+        }
+        )

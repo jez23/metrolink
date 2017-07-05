@@ -7,8 +7,17 @@ this._currentStation = startingStation
 Tram.prototype = {
 getCurrentStation: function () {
     return this._currentStation
+    },
+
+
+  reset: function() {
+        this._currentStation = this._route.getStations()[0]
 
 },
+
+
+
+
 
 drive: function() {
     var routeStations = this._route.getStations()
