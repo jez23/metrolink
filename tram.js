@@ -20,7 +20,10 @@ drive: function() {
     }
 
     this._currentStation = routeStations[nextStationIndex]
+
     return "This is the service from "  + routeStations[0].getName() + " to " + routeStations[routeStations.length-1].getName()  + " Now arriving at: " + this._currentStation.getName()
     
+
+  
 }
 }
