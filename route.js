@@ -9,6 +9,10 @@ addStation: function(station){
 },
 getStations: function(){
     return this._stations
+},
+getStartingStation: function (){
+    return this._stations[0]
+
 }
 }
 
